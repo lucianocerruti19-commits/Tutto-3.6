@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* HEADER */
+.topbar {
+  background: #111;
+  padding: 18px;
+  border-bottom: 2px solid gold;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 50px;
+  border-radius: 15px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: 900;
+  color: gold;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+.tabs button {
+  flex: none;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  background: #222;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tabs button:hover {
+  background: gold;
+  color: black;
+}
+
+.tabs button.active {
+  background: gold;
+  color: black;
+}
+
+/* HERO */
+.hero {
+  margin: 15px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+.hero-text h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: gold;
+}
+
+.hero-text p {
+  margin-top: 8px;
+}
+
+.btn-main {
+  margin-top: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  width: 90%;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+}
+
+/* TITLES */
+.section-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 35px 15px 15px;
+  color: gold;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 0 15px;
+}
+
+/* CARD */
+.food-card {
+  background: #111;
+  border-radius: 22px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgba(255,215,0,0.3);
+  transition: 0.3s;
+  animation: fadeIn 0.8s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid gold;
+}
+
+.food-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: black;
+  border-radius: 18px;
+}
+
+.food-card h3 {
+  margin-top: 10px;
+}
+
+.price {
+  margin: 8px 0;
+  font-weight: bold;
+  color: gold;
+}
+
+.food-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+}
+
+/* CART */
+.cart {
+  background: #111;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  border: 2px solid gold;
+}
+
+#cartItems div {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.removeBtn {
+  background: crimson;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.cart-actions {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-whatsapp {
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: #25d366;
+  font-weight: bold;
+}
+
+.btn-clear {
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: crimson;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: gold;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================= */
+/* SPLASH SCREEN PREMIUM */
+/* ============================= */
+
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #000000, #111111);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: gold;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.splash-logo {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
+  animation: zoomIn 1.2s ease;
+}
+
+#splash h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  letter-spacing: 2px;
+  animation: fadeIn 1.5s ease;
+}
+
+#splash p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: white;
+  opacity: 0.7;
+  animation: fadeIn 2s ease;
+}
+
+/* Animaciones */
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

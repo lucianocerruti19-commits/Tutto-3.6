@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tutto per Tutti | Premium Menu</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="icon" href="icon-192.png" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="logo.png" alt="Tutto Logo" />
+      <h1>Tutto per Tutti</h1>
+    </div>
+
+    <nav class="tabs">
+      <button onclick="filterMenu('burgers')" class="active">🍔 Burgers</button>
+      <button onclick="filterMenu('pizzas')">🍕 Pizzas</button>
+      <button onclick="filterMenu('drinks')">🥤 Bebidas</button>
+      <button onclick="filterMenu('desserts')">🍰 Postres</button>
+      <button onclick="filterMenu('all')">⭐ Todo</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Premium Delivery</h2>
+      <p>Pedí desde tu celular con estilo 🔥</p>
+
+      <button class="btn-main" onclick="useLocation()">
+        📍 Activar Ubicación
+      </button>
+
+      <p id="locationText">Ubicación no seleccionada</p>
+    </div>
+
+    <div class="hero-img">
+      <img src="hero.jpg" alt="Banner" />
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <main class="menu">
+
+    <!-- BURGERS -->
+    <h2 class="section-title">🍔 Hamburguesas</h2>
+    <div class="grid">
+
+      <div class="food-card burgers">
+        <img src="burger1.jpg" />
+        <h3>Big Tutto Burger</h3>
+        <p class="price">$4500</p>
+        <button onclick="addToCart('Big Tutto Burger', 4500)">Agregar +</button>
+      </div>
+
+      <div class="food-card burgers">
+        <img src="burger2.jpg" />
+        <h3>Cheese Premium</h3>
+        <p class="price">$5000</p>
+        <button onclick="addToCart('Cheese Premium', 5000)">Agregar +</button>
+      </div>
+
+    </div>
+
+    <!-- PIZZAS -->
+    <h2 class="section-title">🍕 Pizzas</h2>
+    <div class="grid">
+
+      <div class="food-card pizzas">
+        <img src="pizza1.jpg" />
+        <h3>Pizza Napolitana</h3>
+        <p class="price">$6000</p>
+        <button onclick="addToCart('Pizza Napolitana', 6000)">Agregar +</button>
+      </div>
+
+      <div class="food-card pizzas">
+        <img src="pizza2.jpg" />
+        <h3>Pizza Pepperoni</h3>
+        <p class="price">$6500</p>
+        <button onclick="addToCart('Pizza Pepperoni', 6500)">Agregar +</button>
+      </div>
+
+    </div>
+
+    <!-- DRINKS -->
+    <h2 class="section-title">🥤 Bebidas</h2>
+    <div class="grid">
+
+      <div class="food-card drinks">
+        <h3>Coca Cola 500ml</h3>
+        <p class="price">$1500</p>
+        <button onclick="addToCart('Coca Cola', 1500)">Agregar +</button>
+      </div>
+
+      <div class="food-card drinks">
+        <h3>Cerveza Heineken</h3>
+        <p class="price">$2500</p>
+        <button onclick="addToCart('Heineken', 2500)">Agregar +</button>
+      </div>
+
+    </div>
+
+    <!-- DESSERTS -->
+    <h2 class="section-title">🍰 Postres</h2>
+    <div class="grid">
+
+      <div class="food-card desserts">
+        <h3>Chocotorta Premium</h3>
+        <p class="price">$3000</p>
+        <button onclick="addToCart('Chocotorta', 3000)">Agregar +</button>
+      </div>
+
+      <div class="food-card desserts">
+        <h3>Helado Artesanal</h3>
+        <p class="price">$2800</p>
+        <button onclick="addToCart('Helado', 2800)">Agregar +</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- CART -->
+  <section class="cart">
+    <h2>🛒 Tu Pedido</h2>
+    <div id="cartItems"></div>
+
+    <h3>Total: <span id="totalPrice">$0</span></h3>
+
+    <div class="cart-actions">
+      <button class="btn-whatsapp" onclick="sendWhatsApp()">
+        📲 Enviar Pedido + Ubicación
+      </button>
+
+      <button class="btn-clear" onclick="clearCart()">
+        Vaciar Carrito
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <p>✨ Tutto Premium App © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js");
+  }
+</script>
+
+</body> 
+<!-- ===================== -->
+<!-- SPLASH SCREEN PREMIUM -->
+<!-- ===================== -->
+<div id="splash">
+  <img src="logo.png" alt="Tutto Logo" class="splash-logo" />
+  <h1>Tutto per Tutti</h1>
+  <p>Cargando menú premium...</p>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+</div>
+</html>

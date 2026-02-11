@@ -1,0 +1,21 @@
+{
+  "name": "Tutto per Tutti | Premium Menu",
+  "short_name": "Tutto",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "App Premium de pedidos Tutto per Tutti",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
